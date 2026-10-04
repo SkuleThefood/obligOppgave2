@@ -54,7 +54,6 @@ class MatriserEnhetsTests {
 		Matriser.skrivUt(b);
 		Matriser.skrivUt(c);
 	}
-	
 	@Test
 	void testtilStreng() {
 		
@@ -78,7 +77,15 @@ class MatriserEnhetsTests {
 		assertArrayEquals(cskalert,skaler);
 		
 	}
-	
+	@Test
+	void testerLik() {
+
+		assertTrue(Matriser.erLik(a, a));
+		assertTrue(Matriser.erLik(c, c));
+		assertFalse(Matriser.erLik(a, b));
+		assertFalse(Matriser.erLik(a, c));
+		assertFalse(Matriser.erLik(c, a));
+	}
 	@Test
 	void testSpeile() {
 		
@@ -89,7 +96,7 @@ class MatriserEnhetsTests {
 		assertFalse(speile == a);
 		assertArrayEquals(speilet,speile);
 	}
-	
+
 	@Test 
 	void testMultipliser () {
 
@@ -103,15 +110,5 @@ class MatriserEnhetsTests {
 		multiplisert = Matriser.multipliser(c,a);
 		assertArrayEquals(ca,multiplisert);
 		
-	}
-	
-	@Test
-	void testerLik() {
-		
-		assertTrue(Matriser.erLik(a, a));
-		assertTrue(Matriser.erLik(c, c));
-		assertFalse(Matriser.erLik(a, b));
-		assertFalse(Matriser.erLik(a, c));
-		assertFalse(Matriser.erLik(c, a));
 	}
 }

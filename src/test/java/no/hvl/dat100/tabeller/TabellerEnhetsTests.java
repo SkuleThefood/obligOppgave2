@@ -32,7 +32,6 @@ class TabellerEnhetsTests {
 		Tabeller.skrivUt(tabell2);
 		Tabeller.skrivUt(tabell3);
 	}
-
 	@Test
 	void testtilStreng() {
 
@@ -47,7 +46,6 @@ class TabellerEnhetsTests {
 		assertEquals(1, Tabeller.summer(tabell2));
 		assertEquals(0, Tabeller.summer(tabell3));
 	}
-
 	@Test
 	void testfinnesTall() {
 		assertTrue(Tabeller.finnesTall(tabell1, 1));
@@ -57,7 +55,6 @@ class TabellerEnhetsTests {
 		assertFalse(Tabeller.finnesTall(tabell1, 7));
 		assertFalse(Tabeller.finnesTall(tabell3, 7));
 	}
-
 	@Test
 	void testposisjonTall() {
 
@@ -69,7 +66,6 @@ class TabellerEnhetsTests {
 		assertEquals(-1, Tabeller.posisjonTall(tabell3, 7));
 
 	}
-
 	@Test
 	void testreverser() {
 
@@ -88,7 +84,6 @@ class TabellerEnhetsTests {
 		assertFalse(tabell3 == reversert3);
 		assertArrayEquals(tabell3, reversert3);
 	}
-
 	@Test
 	void erSortert() {
 
@@ -100,7 +95,6 @@ class TabellerEnhetsTests {
 
 		assertFalse(Tabeller.erSortert(tabell));
 	}
-
 	@Test
 	void testsettSammen() {
 
